@@ -1,0 +1,19 @@
+<view>
+ <scroll-view scroll-y class="wrap">
+  <view 
+  wx:for="{{num}}"
+  wx:key="*this" class="row" style="transform: translateY(-{{distance}}px)"
+  >
+  {{index+1}}
+  </view>
+ </scroll-view>
+</view>
+
+<view class="input">
+ <text>最大的滚动数：</text><input bindinput="input" placeholder="默认5"/>
+</view>
+<view class="input">
+ <text>滚动间隔：</text><input bindinput="input2" placeholder="默认1秒"/>
+</view>
+ 
+<button class="button" bindtap = "confirm">确定</button>
